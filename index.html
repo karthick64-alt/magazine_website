@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Magazine Site — Stories for the Curious</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0%200%20100%20100'%3E%3Crect width='100' height='100' rx='16' fill='%23111827'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%23f97316' font-family='Inter,%20Arial,%20sans-serif'%3EM%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-M2JvDC11FXGe0XEt3G5UpiRaY1oWXcnZ6+QcmGeXgnz9K/Y/xFdVtOfvtTDHkJ/xZBwbNG0Ax7Anxr1L7UNhdg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/dark.css" />
+  </head>
+  <body data-page="home">
+    <div data-component="header"></div>
+    <div data-component="ticker"></div>
+
+    <main>
+      <section class="hero-carousel py-4">
+        <div class="container">
+          <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators" data-featured-indicators></div>
+            <div class="carousel-inner rounded-4 overflow-hidden shadow-lg" data-featured></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="container">
+          <div class="section-header">
+            <span>Latest News</span>
+            <h2>Stay ahead with our editors’ daily picks</h2>
+            <p class="text-muted">Curated coverage across technology, lifestyle, design, travel, and culture for curious readers.</p>
+          </div>
+          <div class="article-grid" data-latest></div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-white">
+        <div class="container">
+          <div class="section-header">
+            <span>Categories</span>
+            <h2>Deep dives across every magazine beat</h2>
+            <p class="text-muted">Explore stories by category, each one curated by editors who live the topics they cover.</p>
+          </div>
+          <div data-category-sections></div>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="container">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-8">
+              <div class="section-header text-start">
+                <span>Editor’s Picks</span>
+                <h2>Curated features to read this weekend</h2>
+              </div>
+              <div class="editor-picks" data-editors-pick></div>
+            </div>
+            <div class="col-lg-4">
+              <div class="section-header text-start">
+                <span>Trending</span>
+                <h2>Most read</h2>
+              </div>
+              <div class="trending-tabs">
+                <div class="nav nav-pills gap-2 mb-3" role="tablist">
+                  <button class="nav-link active" data-trending-tab="Week" type="button">Week</button>
+                  <button class="nav-link" data-trending-tab="Month" type="button">Month</button>
+                  <button class="nav-link" data-trending-tab="Year" type="button">Year</button>
+                </div>
+                <ul class="list-group list-group-flush" data-trending-list></ul>
+              </div>
+
+              <div class="ads-banner mt-4">
+                <small>Sponsored</small>
+                <h5>FuturePress Studio</h5>
+                <p>Launch your magazine app in under 30 days with our editorial design system.</p>
+                <a class="btn btn-outline-light rounded-pill" href="#">Request a demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-white">
+        <div class="container">
+          <div class="section-header">
+            <span>Multimedia</span>
+            <h2>Watch, listen, and learn from our contributors</h2>
+          </div>
+          <div class="video-grid" data-video-grid></div>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="container">
+          <div class="newsletter-box">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-6">
+                <span class="badge bg-light text-dark text-uppercase">Newsletter</span>
+                <h3 class="mt-3">Subscribe to our Sunday briefing</h3>
+                <p class="mb-0">A handpicked digest of emerging ideas, deep dives, and cultural signals.</p>
+              </div>
+              <div class="col-lg-6">
+                <form class="d-flex gap-3 justify-content-end" data-newsletter>
+                  <input type="text" class="form-control" placeholder="Your name" required />
+                  <input type="email" class="form-control" placeholder="Email address" required />
+                  <button class="btn btn-dark rounded-pill" type="submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
